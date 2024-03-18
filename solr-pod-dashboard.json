@@ -21,8 +21,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 35,
-  "iteration": 1710410291000,
+  "id": 33,
+  "iteration": 1710769551326,
   "links": [],
   "panels": [
     {
@@ -90,7 +90,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by (collection) (solr_metrics_core_query_1minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"})\n",
+          "expr": "sum by (collection) (solr_metrics_core_query_1minRate{namespace=~\"$namespace\",job=\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"})\n",
           "interval": "",
           "legendFormat": "{{pod}}",
           "refId": "A"
@@ -190,7 +190,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by (base_url) (solr_metrics_core_query_1minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"})",
+          "expr": "sum by (base_url) (solr_metrics_core_query_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"})",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "{{base_url}}",
@@ -293,7 +293,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_p95_ms{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_p95_ms{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}  {{core}}  {{searchHandler}}",
           "refId": "A"
@@ -395,7 +395,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_p99_ms{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_p99_ms{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}  {{core}}  {{searchHandler}} {{pod}}",
           "refId": "A"
@@ -497,7 +497,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_5minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_5minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}  {{core}} {{pod}} {{searchHandler}}",
           "refId": "A"
@@ -599,7 +599,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_1minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}  {{core}}  {{pod}} {{searchHandler}}",
           "refId": "A"
@@ -701,7 +701,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_p75_ms{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_p75_ms{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}  {{core}} {{pod}} {{searchHandler}}",
           "refId": "A"
@@ -802,7 +802,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_errors_1minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_errors_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -902,7 +902,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_local_1minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_local_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}/{{core}}{{searchHandler}}{{pod}}",
           "refId": "A"
@@ -1002,7 +1002,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_query_local_count{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
+          "expr": "increase(solr_metrics_core_query_local_count{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
           "interval": "",
           "legendFormat": "{{base_url}}/{{core}}{{searchHandler}}",
           "refId": "A"
@@ -1028,6 +1028,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1076",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -1036,6 +1037,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1077",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1100,7 +1102,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_client_errors_1minRate{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_client_errors_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}  {{core}} {{pod}} {{searchHandler}}",
           "refId": "A"
@@ -1200,7 +1202,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_query_local_p95_ms{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
+          "expr": "solr_metrics_core_query_local_p95_ms{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
           "interval": "",
           "legendFormat": "{{base_url}}/{{core}}{{searchHandler}}",
           "refId": "A"
@@ -1315,7 +1317,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_jetty_requests_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
+          "expr": "increase(solr_metrics_jetty_requests_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1343,6 +1345,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:58",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1351,6 +1354,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:59",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1416,7 +1420,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_jetty_response_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
+          "expr": "increase(solr_metrics_jetty_response_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1445,6 +1449,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1511",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1453,6 +1458,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1512",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1491,6 +1497,8 @@
         "alignAsTable": true,
         "avg": true,
         "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": true,
         "min": true,
         "rightSide": true,
@@ -1517,7 +1525,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_jetty_dispatches_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
+          "expr": "increase(solr_metrics_jetty_dispatches_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1545,6 +1553,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1594",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1553,6 +1562,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1595",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1630,7 +1640,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_buffers{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}",
+          "expr": "solr_metrics_jvm_buffers{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1658,6 +1668,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1687",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -1666,6 +1677,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1688",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1704,6 +1716,8 @@
         "alignAsTable": true,
         "avg": true,
         "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": true,
         "min": true,
         "show": true,
@@ -1729,7 +1743,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_buffers_bytes{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_jvm_buffers_bytes{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1757,6 +1771,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1938",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -1765,6 +1780,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1939",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1803,6 +1819,8 @@
         "alignAsTable": true,
         "avg": true,
         "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": true,
         "min": true,
         "show": true,
@@ -1828,7 +1846,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_jvm_gc_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
+          "expr": "increase(solr_metrics_jvm_gc_total{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1856,6 +1874,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2021",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1864,6 +1883,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2022",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1927,7 +1947,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_jvm_gc_seconds_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
+          "expr": "increase(solr_metrics_jvm_gc_seconds_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1955,6 +1975,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2104",
           "decimals": null,
           "format": "s",
           "label": null,
@@ -1964,6 +1985,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2105",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2026,7 +2048,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_memory_heap_bytes{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_jvm_memory_heap_bytes{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2054,6 +2076,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2195",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -2062,6 +2085,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2196",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2125,7 +2149,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_memory_non_heap_bytes{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_jvm_memory_non_heap_bytes{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2153,6 +2177,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2278",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -2161,6 +2186,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2279",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2224,7 +2250,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_memory_pools_bytes{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_jvm_memory_pools_bytes{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2252,6 +2278,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2361",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -2260,6 +2287,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2362",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2323,7 +2351,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_memory_bytes{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_jvm_memory_bytes{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2351,6 +2379,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2525",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -2359,6 +2388,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2526",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2425,7 +2455,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_threads{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_jvm_threads{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2453,6 +2483,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2863",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2461,6 +2492,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2864",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2538,7 +2570,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_os_memory_bytes{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}",
+          "expr": "solr_metrics_jvm_os_memory_bytes{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2566,6 +2598,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2948",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -2574,6 +2607,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2949",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2637,7 +2671,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_os_file_descriptors{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}",
+          "expr": "solr_metrics_jvm_os_file_descriptors{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2665,6 +2699,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3031",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2673,6 +2708,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3032",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2736,7 +2772,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_os_cpu_load{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}",
+          "expr": "solr_metrics_jvm_os_cpu_load{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2764,6 +2800,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3130",
           "format": "percentunit",
           "label": null,
           "logBase": 1,
@@ -2772,6 +2809,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3131",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2835,7 +2873,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_jvm_os_cpu_time_seconds{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
+          "expr": "increase(solr_metrics_jvm_os_cpu_time_seconds{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2863,6 +2901,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3213",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2871,6 +2910,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3214",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2937,7 +2977,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_jvm_os_load_average{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\"}",
+          "expr": "solr_metrics_jvm_os_load_average{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -2965,6 +3005,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3304",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2973,6 +3014,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3305",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3052,7 +3094,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_requests_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_requests_total{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3080,6 +3122,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3397",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3088,6 +3131,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3398",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3153,7 +3197,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_node_time_seconds_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
+          "expr": "increase(solr_metrics_node_time_seconds_total{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3181,6 +3225,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3480",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3189,6 +3234,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3481",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3254,7 +3300,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_node_client_errors_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
+          "expr": "increase(solr_metrics_node_client_errors_total{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3282,6 +3328,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3652",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3290,6 +3337,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3653",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3355,7 +3403,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_node_server_errors_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
+          "expr": "increase(solr_metrics_node_server_errors_total{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3383,6 +3431,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3735",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3391,6 +3440,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3736",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3456,7 +3506,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_node_errors_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
+          "expr": "increase(solr_metrics_node_errors_total{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3484,6 +3534,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3822",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3492,6 +3543,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3823",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3557,7 +3609,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_node_timeouts_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
+          "expr": "increase(solr_metrics_node_timeouts_total{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3585,6 +3637,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3905",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3593,6 +3646,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3906",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3658,7 +3712,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_cores{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_cores{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3686,6 +3740,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3988",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3694,6 +3749,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3989",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3759,7 +3815,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_core_root_fs_bytes{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_core_root_fs_bytes{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3787,6 +3843,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4071",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -3795,6 +3852,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4072",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3860,7 +3918,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_thread_pool_completed_total{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_thread_pool_completed_total{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3888,6 +3946,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4170",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3896,6 +3955,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4171",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3961,7 +4021,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_thread_pool_submitted_total{namespace=~\"$namespace\",job=~\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_thread_pool_submitted_total{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -3989,6 +4049,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4253",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -3997,6 +4058,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4254",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4062,7 +4124,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_thread_pool_running{namespace=~\"$namespace\",job=~\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_thread_pool_running{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4090,6 +4152,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4336",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4098,6 +4161,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4337",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4164,7 +4228,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_node_connections{namespace=~\"$namespace\",job=~\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}",
+          "expr": "solr_metrics_node_connections{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4192,6 +4256,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4435",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4200,6 +4265,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4436",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4264,7 +4330,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by (base_url) (max by (core) (solr_collections_shard_leader{namespace=\"$namespace\",job=\"$job\",base_url=~\"$base_url\",pod=~\"$pod\"}))",
+          "expr": "sum by (base_url) (max by (core) (solr_collections_shard_leader{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\"$base_url\",pod=~\"$pod\"}))",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "{{base_url}} {{pod}}",
@@ -4273,6 +4339,7 @@
       ],
       "thresholds": [
         {
+          "$$hashKey": "object:4548",
           "colorMode": "critical",
           "fill": true,
           "line": true,
@@ -4299,6 +4366,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4520",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4307,6 +4375,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4521",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4339,7 +4408,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "description": "Total core request.",
       "fieldConfig": {
         "defaults": {},
@@ -4386,7 +4455,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_requests_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
+          "expr": "increase(solr_metrics_core_requests_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4414,6 +4483,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4625",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4422,6 +4492,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4626",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4487,7 +4558,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_time_seconds_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_time_seconds_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4515,6 +4586,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:4708",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4523,6 +4595,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:4709",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4588,7 +4661,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_client_errors_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_client_errors_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4616,6 +4689,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:58",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4624,6 +4698,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:59",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4688,7 +4763,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_server_errors_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_server_errors_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4716,6 +4791,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:592",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4724,6 +4800,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:593",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4789,7 +4866,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_errors_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_errors_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4817,6 +4894,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:683",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4825,6 +4903,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:684",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4890,7 +4969,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_timeouts_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_timeouts_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4918,6 +4997,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:766",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4926,6 +5006,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:767",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -4991,7 +5072,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_searcher_cache_ratio{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_searcher_cache_ratio{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5019,6 +5100,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:853",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5027,6 +5109,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:854",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5092,7 +5175,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_searcher_cache{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_searcher_cache{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5120,6 +5203,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:936",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5128,6 +5212,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:937",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5193,7 +5278,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_searcher_warmup_time_seconds{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_searcher_warmup_time_seconds{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5221,6 +5306,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1027",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5229,6 +5315,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1028",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5294,7 +5381,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_searcher_cumulative_cache_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_searcher_cumulative_cache_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5322,6 +5409,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1110",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5330,6 +5418,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1111",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5395,7 +5484,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_fs_bytes{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_fs_bytes{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5423,6 +5512,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1193",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -5431,6 +5521,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1194",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5496,7 +5587,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_index_size_bytes{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_index_size_bytes{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5524,6 +5615,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1292",
           "format": "decbytes",
           "label": null,
           "logBase": 1,
@@ -5532,6 +5624,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1293",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5596,7 +5689,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_searcher_documents{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_searcher_documents{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5624,6 +5717,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1383",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5632,6 +5726,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1384",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5697,7 +5792,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_adds_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_adds_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5725,6 +5820,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1466",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5733,6 +5829,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1467",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5798,7 +5895,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "solr_metrics_core_update_handler_pending_docs{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
+          "expr": "solr_metrics_core_update_handler_pending_docs{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5826,6 +5923,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1549",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5834,6 +5932,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1550",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5899,7 +5998,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_deletes_by_id_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_deletes_by_id_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -5927,6 +6026,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1640",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -5935,6 +6035,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1641",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6000,7 +6101,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_deletes_by_query_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_deletes_by_query_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6028,6 +6129,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1723",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6036,6 +6138,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1724",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6101,7 +6204,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_expunge_deletes_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_expunge_deletes_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6129,6 +6232,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1814",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6137,6 +6241,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1815",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6202,7 +6307,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_merges_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_merges_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6230,6 +6335,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1897",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6238,6 +6344,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1898",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6303,7 +6410,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_splits_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_splits_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6331,6 +6438,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:1984",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6339,6 +6447,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:1985",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6404,7 +6513,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_rollbacks_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_rollbacks_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6432,6 +6541,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2067",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6440,6 +6550,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2068",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6505,7 +6616,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_optimizes_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_optimizes_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6533,6 +6644,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2150",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6541,6 +6653,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2151",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6606,7 +6719,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_auto_commits_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_auto_commits_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6634,6 +6747,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2314",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6642,6 +6756,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2315",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6707,7 +6822,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_soft_auto_commits_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_soft_auto_commits_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6735,6 +6850,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2397",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6743,107 +6859,7 @@
           "show": true
         },
         {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${datasource}",
-      "description": "Total number of update handler error",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 11,
-        "x": 12,
-        "y": 251
-      },
-      "hiddenSeries": false,
-      "id": 345,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.5",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_errors_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 2,
-          "legendFormat": "{{base_url}}/{{core}} {{pod}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Update Handler Errors",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
-        },
-        {
+          "$$hashKey": "object:2398",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6873,8 +6889,8 @@
       "gridPos": {
         "h": 7,
         "w": 12,
-        "x": 0,
-        "y": 258
+        "x": 12,
+        "y": 251
       },
       "hiddenSeries": false,
       "id": 343,
@@ -6909,7 +6925,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_update_handler_commits_total{namespace=~\"$namespace\",job=~\"$job\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "expr": "increase(solr_metrics_core_update_handler_commits_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -6937,6 +6953,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2563",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6945,6 +6962,110 @@
           "show": true
         },
         {
+          "$$hashKey": "object:2564",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${datasource}",
+      "description": "Total number of update handler error",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 258
+      },
+      "hiddenSeries": false,
+      "id": 345,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.5",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase(solr_metrics_core_update_handler_errors_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\"}[1m])",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{base_url}}/{{core}} {{pod}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Update Handler Errors",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:2480",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:2481",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -6992,7 +7113,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "demo",
           "value": "demo"
         },
@@ -7021,64 +7142,29 @@
         "useTags": false
       },
       {
-        "allValue": null,
-        "current": {
-          "selected": true,
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
-        },
-        "datasource": "${datasource}",
-        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$job\",zk_host=~\".+\"},zk_host)",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "zk_host",
-        "options": [],
-        "query": {
-          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$job\",zk_host=~\".+\"},zk_host)",
-          "refId": "StandardVariableQuery"
-        },
-        "refresh": 1,
-        "regex": "/(.+)/",
-        "skipUrlSync": false,
-        "sort": 1,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
-      },
-      {
         "allValue": ".*",
         "current": {
           "selected": true,
           "tags": [],
           "text": [
-            "solr-combined-stats"
+            "solr-cluster"
           ],
           "value": [
-            "solr-combined-stats"
+            "solr-cluster"
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_ping{job=~\".+\",namespace=~\"$namespace\"},job)",
+        "definition": "label_values(kubedb_com_solr_status_phase{namespace=~\"$namespace\"},app)",
         "description": null,
         "error": null,
         "hide": 0,
         "includeAll": true,
         "label": null,
         "multi": true,
-        "name": "job",
+        "name": "app",
         "options": [],
         "query": {
-          "query": "label_values(solr_ping{job=~\".+\",namespace=~\"$namespace\"},job)",
+          "query": "label_values(kubedb_com_solr_status_phase{namespace=~\"$namespace\"},app)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7095,7 +7181,41 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "tags": [],
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "${datasource}",
+        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\".+\"},zk_host)",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "zk_host",
+        "options": [],
+        "query": {
+          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\".+\"},zk_host)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "/(.+)/",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
           "text": [
             "All"
           ],
@@ -7104,7 +7224,7 @@
           ]
         },
         "datasource": null,
-        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",pod=~\".+\"},pod)",
+        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",pod=~\".+\"},pod)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7120,17 +7240,27 @@
           },
           {
             "selected": false,
-            "text": "solr-combined-0",
-            "value": "solr-combined-0"
+            "text": "solr-cluster-data-1",
+            "value": "solr-cluster-data-1"
           },
           {
             "selected": false,
-            "text": "solr-combined-1",
-            "value": "solr-combined-1"
+            "text": "solr-cluster-overseer-0",
+            "value": "solr-cluster-overseer-0"
+          },
+          {
+            "selected": false,
+            "text": "solr-cluster-coordinator-0",
+            "value": "solr-cluster-coordinator-0"
+          },
+          {
+            "selected": false,
+            "text": "solr-cluster-data-0",
+            "value": "solr-cluster-data-0"
           }
         ],
         "query": {
-          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",pod=~\".+\"},pod)",
+          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",pod=~\".+\"},pod)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 0,
@@ -7155,7 +7285,7 @@
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$job\",base_url=~\".+\"},base_url)",
+        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\".+\"},base_url)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7165,7 +7295,7 @@
         "name": "base_url",
         "options": [],
         "query": {
-          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$job\",base_url=~\".+\"},base_url)",
+          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\".+\"},base_url)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7190,7 +7320,7 @@
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\".+\"},collection)",
+        "definition": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\".+\"},collection)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7200,7 +7330,7 @@
         "name": "collection",
         "options": [],
         "query": {
-          "query": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\".+\"},collection)",
+          "query": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\".+\"},collection)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7225,7 +7355,7 @@
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\".+\"},shard)",
+        "definition": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\".+\"},shard)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7235,7 +7365,7 @@
         "name": "shard",
         "options": [],
         "query": {
-          "query": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\".+\"},shard)",
+          "query": "label_values(solr_collections_shard_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\".+\"},shard)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7260,7 +7390,7 @@
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\".+\"},replica)",
+        "definition": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\".+\"},replica)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7270,7 +7400,7 @@
         "name": "replica",
         "options": [],
         "query": {
-          "query": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\".+\"},replica)",
+          "query": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\".+\"},replica)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7295,7 +7425,7 @@
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},core)",
+        "definition": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},core)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7305,7 +7435,7 @@
         "name": "core",
         "options": [],
         "query": {
-          "query": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$job\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},core)",
+          "query": "label_values(solr_collections_replica_state{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\"$zk_host\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},core)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7330,7 +7460,7 @@
           ]
         },
         "datasource": "${datasource}",
-        "definition": "label_values(solr_metrics_core_query_errors_1minRate{namespace=\"$namespace\",job=\"$job\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},searchHandler)",
+        "definition": "label_values(solr_metrics_core_query_errors_1minRate{namespace=\"$namespace\",job=\"$app-stats\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},searchHandler)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -7340,7 +7470,7 @@
         "name": "searchHandler",
         "options": [],
         "query": {
-          "query": "label_values(solr_metrics_core_query_errors_1minRate{namespace=\"$namespace\",job=\"$job\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},searchHandler)",
+          "query": "label_values(solr_metrics_core_query_errors_1minRate{namespace=\"$namespace\",job=\"$app-stats\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\"},searchHandler)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -7356,8 +7486,8 @@
     ]
   },
   "time": {
-    "from": "2024-03-12T08:43:14.446Z",
-    "to": "2024-03-12T09:13:14.446Z"
+    "from": "now-5m",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -7387,5 +7517,5 @@
   "timezone": "utc",
   "title": "KubeDB / Solr / Pod",
   "uid": "0dBMIuN7m",
-  "version": 21
+  "version": 10
 }
