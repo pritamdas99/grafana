@@ -22,8 +22,8 @@
   "editable": true,
   "gnetId": 9628,
   "graphTooltip": 0,
-  "id": 30,
-  "iteration": 1710748414315,
+  "id": 37,
+  "iteration": 1710833053914,
   "links": [],
   "panels": [
     {
@@ -3035,5 +3035,5 @@
   "timezone": "",
   "title": "KubeDB / Solr / Summary",
   "uid": "92M7QvyVk",
-  "version": 4
+  "version": 2
 }
