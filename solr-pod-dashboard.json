@@ -18,11 +18,12 @@
       }
     ]
   },
+  "description": "Solr Pod Dashboard for Prometheus Solr Exporter",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
   "id": 33,
-  "iteration": 1710909767955,
+  "iteration": 1710915292741,
   "links": [],
   "panels": [
     {
@@ -4008,7 +4009,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${datasource}",
       "description": "Total core request.",
       "fieldConfig": {
         "defaults": {},
@@ -4055,7 +4056,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(solr_metrics_core_requests_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
+          "expr": "increase(solr_metrics_core_requests_total{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -4911,7 +4912,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
@@ -6744,7 +6745,7 @@
       {
         "allValue": ".*",
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "solr-cluster"
           ],
@@ -6779,43 +6780,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
-        },
-        "datasource": "${datasource}",
-        "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\".+\"},zk_host)",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": true,
-        "label": null,
-        "multi": true,
-        "name": "zk_host",
-        "options": [],
-        "query": {
-          "query": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",zk_host=~\".+\"},zk_host)",
-          "refId": "StandardVariableQuery"
-        },
-        "refresh": 1,
-        "regex": "/(.+)/",
-        "skipUrlSync": false,
-        "sort": 1,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
-      },
-      {
-        "allValue": null,
-        "current": {
-          "selected": true,
-          "tags": [],
+          "selected": false,
           "text": [
             "All"
           ],
@@ -6876,7 +6841,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -6888,7 +6853,7 @@
         "definition": "label_values(solr_ping{namespace=\"$namespace\",job=\"$app-stats\",base_url=~\".+\"},base_url)",
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": null,
         "multi": true,
@@ -6911,7 +6876,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -6946,7 +6911,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -6981,7 +6946,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -7016,7 +6981,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -7051,7 +7016,7 @@
       {
         "allValue": ".*",
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -7082,11 +7047,42 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "zoo-0.zoo-pods.demo.svc.cluster.local:2181,zoo-1.zoo-pods.demo.svc.cluster.local:2181,zoo-2.zoo-pods.demo.svc.cluster.local:2181",
+          "value": "zoo-0.zoo-pods.demo.svc.cluster.local:2181,zoo-1.zoo-pods.demo.svc.cluster.local:2181,zoo-2.zoo-pods.demo.svc.cluster.local:2181"
+        },
+        "datasource": null,
+        "definition": "label_values(solr_ping{namespace=~\"$namespace\",job=~\"$app-stats\",zk_host=~\".+\"},zk_host)",
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "zk_host",
+        "options": [],
+        "query": {
+          "query": "label_values(solr_ping{namespace=~\"$namespace\",job=~\"$app-stats\",zk_host=~\".+\"},zk_host)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "regex": "/(.+)/",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
       }
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -7117,5 +7113,5 @@
   "timezone": "utc",
   "title": "KubeDB / Solr / Pod",
   "uid": "0dBMIuN7m",
-  "version": 11
+  "version": 21
 }

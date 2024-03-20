@@ -3,20 +3,27 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": "${datasource}",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
+  "description": "Solr Database Dashboard for Prometheus Solr Exporter",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
   "id": 35,
-  "iteration": 1710758835147,
+  "iteration": 1710915242629,
   "links": [],
   "panels": [
     {
@@ -1965,7 +1972,7 @@
       },
       "id": 54,
       "panels": [],
-      "title": "Query Metrics",
+      "title": "Node Metrics",
       "type": "row"
     },
     {
@@ -3371,7 +3378,7 @@
         "definition": "label_values(solr_ping{namespace=~\"$namespace\",job=~\"$app-stats\",zk_host=~\".+\"},zk_host)",
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": null,
         "multi": true,
@@ -3406,7 +3413,7 @@
         "definition": "label_values(solr_ping{namespace=~\"$namespace\",job=~\"$app-stats\",base_url=~\".+\"},base_url)",
         "description": null,
         "error": null,
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": null,
         "multi": true,
@@ -3436,5 +3443,5 @@
   "timezone": "",
   "title": "KubeDB / Solr / Dashboard",
   "uid": "Vm64KR1Sz",
-  "version": 2
+  "version": 13
 }
