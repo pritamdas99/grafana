@@ -22,7 +22,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": 33,
-  "iteration": 1710769551326,
+  "iteration": 1710909767955,
   "links": [],
   "panels": [
     {
@@ -852,413 +852,13 @@
       }
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "description": "Implies local QPS per core in 1 min rate",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 5,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 0,
-        "y": 29
-      },
-      "hiddenSeries": false,
-      "id": 265,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.5",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "solr_metrics_core_query_local_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
-          "interval": "",
-          "legendFormat": "{{base_url}}/{{core}}{{searchHandler}}{{pod}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Local QPS per Core (1-min rate)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:5488",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:5489",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "description": "Helps identify if a core is receiving more traffic than other cores, possibly indicating unbalanced load.",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bytes"
-        },
-        "overrides": []
-      },
-      "fill": 5,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 12,
-        "y": 29
-      },
-      "hiddenSeries": false,
-      "id": 263,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.5",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "increase(solr_metrics_core_query_local_count{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}[1m])",
-          "interval": "",
-          "legendFormat": "{{base_url}}/{{core}}{{searchHandler}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Local Query Count per Core",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:1076",
-          "format": "bytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:1077",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "description": "Implies query client error per core  in 1 min rate.",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "fill": 5,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 0,
-        "y": 36
-      },
-      "hiddenSeries": false,
-      "id": 269,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.5",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "solr_metrics_core_query_client_errors_1minRate{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
-          "interval": "",
-          "legendFormat": "{{base_url}}  {{core}} {{pod}} {{searchHandler}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Query Client Errors per Core (1-min rate)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:5571",
-          "format": "decbytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
-        },
-        {
-          "$$hashKey": "object:5572",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${datasource}",
-      "description": "Implies local query time per core in 95ms",
-      "fieldConfig": {
-        "defaults": {
-          "unit": "bytes"
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 12,
-        "y": 36
-      },
-      "hiddenSeries": false,
-      "id": 267,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": false,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.5",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "solr_metrics_core_query_local_p95_ms{namespace=~\"$namespace\",job=~\"$app-stats\",pod=~\"$pod\",base_url=~\"$base_url\",collection=~\"$collection\",shard=~\"$shard\",replica=~\"$replica\",core=~\"$core\",searchHandler=~\"$searchHandler\"}",
-          "interval": "",
-          "legendFormat": "{{base_url}}/{{core}}{{searchHandler}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Local Query Time per Core (p95 ms)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:5654",
-          "format": "bytes",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:5655",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
       "collapsed": false,
       "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 43
+        "y": 29
       },
       "id": 279,
       "panels": [],
@@ -1282,7 +882,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 44
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 273,
@@ -1385,7 +985,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 44
+        "y": 30
       },
       "hiddenSeries": false,
       "id": 275,
@@ -1489,7 +1089,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 51
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 277,
@@ -1583,7 +1183,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 58
+        "y": 44
       },
       "id": 203,
       "panels": [],
@@ -1607,7 +1207,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 59
+        "y": 45
       },
       "hiddenSeries": false,
       "id": 205,
@@ -1708,7 +1308,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 59
+        "y": 45
       },
       "hiddenSeries": false,
       "id": 207,
@@ -1811,7 +1411,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 66
+        "y": 52
       },
       "hiddenSeries": false,
       "id": 209,
@@ -1914,7 +1514,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 66
+        "y": 52
       },
       "hiddenSeries": false,
       "id": 211,
@@ -2015,7 +1615,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 73
+        "y": 59
       },
       "hiddenSeries": false,
       "id": 213,
@@ -2116,7 +1716,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 73
+        "y": 59
       },
       "hiddenSeries": false,
       "id": 215,
@@ -2217,7 +1817,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 80
+        "y": 66
       },
       "hiddenSeries": false,
       "id": 217,
@@ -2318,7 +1918,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 80
+        "y": 66
       },
       "hiddenSeries": false,
       "id": 219,
@@ -2419,7 +2019,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 87
+        "y": 73
       },
       "hiddenSeries": false,
       "id": 221,
@@ -2513,7 +2113,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 94
+        "y": 80
       },
       "id": 291,
       "panels": [],
@@ -2537,7 +2137,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 95
+        "y": 81
       },
       "hiddenSeries": false,
       "id": 281,
@@ -2638,7 +2238,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 95
+        "y": 81
       },
       "hiddenSeries": false,
       "id": 283,
@@ -2739,7 +2339,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 102
+        "y": 88
       },
       "hiddenSeries": false,
       "id": 285,
@@ -2840,7 +2440,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 102
+        "y": 88
       },
       "hiddenSeries": false,
       "id": 287,
@@ -2941,7 +2541,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 109
+        "y": 95
       },
       "hiddenSeries": false,
       "id": 289,
@@ -3035,7 +2635,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 116
+        "y": 102
       },
       "id": 225,
       "panels": [],
@@ -3059,7 +2659,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 117
+        "y": 103
       },
       "hiddenSeries": false,
       "id": 227,
@@ -3162,7 +2762,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 117
+        "y": 103
       },
       "hiddenSeries": false,
       "id": 229,
@@ -3265,7 +2865,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 124
+        "y": 110
       },
       "hiddenSeries": false,
       "id": 231,
@@ -3368,7 +2968,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 124
+        "y": 110
       },
       "hiddenSeries": false,
       "id": 233,
@@ -3471,7 +3071,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 131
+        "y": 117
       },
       "hiddenSeries": false,
       "id": 235,
@@ -3574,7 +3174,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 131
+        "y": 117
       },
       "hiddenSeries": false,
       "id": 237,
@@ -3677,7 +3277,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 138
+        "y": 124
       },
       "hiddenSeries": false,
       "id": 239,
@@ -3780,7 +3380,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 138
+        "y": 124
       },
       "hiddenSeries": false,
       "id": 241,
@@ -3883,7 +3483,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 145
+        "y": 131
       },
       "hiddenSeries": false,
       "id": 243,
@@ -3986,7 +3586,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 145
+        "y": 131
       },
       "hiddenSeries": false,
       "id": 245,
@@ -4089,7 +3689,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 152
+        "y": 138
       },
       "hiddenSeries": false,
       "id": 247,
@@ -4192,7 +3792,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 159
+        "y": 145
       },
       "hiddenSeries": false,
       "id": 249,
@@ -4296,7 +3896,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 159
+        "y": 145
       },
       "hiddenSeries": false,
       "id": 251,
@@ -4396,7 +3996,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 166
+        "y": 152
       },
       "id": 295,
       "panels": [],
@@ -4420,7 +4020,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 167
+        "y": 153
       },
       "hiddenSeries": false,
       "id": 293,
@@ -4523,7 +4123,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 167
+        "y": 153
       },
       "hiddenSeries": false,
       "id": 297,
@@ -4626,7 +4226,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 174
+        "y": 160
       },
       "hiddenSeries": false,
       "id": 299,
@@ -4728,7 +4328,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 174
+        "y": 160
       },
       "hiddenSeries": false,
       "id": 301,
@@ -4831,7 +4431,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 181
+        "y": 167
       },
       "hiddenSeries": false,
       "id": 303,
@@ -4934,7 +4534,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 181
+        "y": 167
       },
       "hiddenSeries": false,
       "id": 305,
@@ -5037,7 +4637,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 188
+        "y": 174
       },
       "hiddenSeries": false,
       "id": 307,
@@ -5140,7 +4740,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 188
+        "y": 174
       },
       "hiddenSeries": false,
       "id": 309,
@@ -5243,7 +4843,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 195
+        "y": 181
       },
       "hiddenSeries": false,
       "id": 311,
@@ -5346,7 +4946,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 195
+        "y": 181
       },
       "hiddenSeries": false,
       "id": 313,
@@ -5449,7 +5049,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 202
+        "y": 188
       },
       "hiddenSeries": false,
       "id": 315,
@@ -5552,7 +5152,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 202
+        "y": 188
       },
       "hiddenSeries": false,
       "id": 317,
@@ -5654,7 +5254,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 209
+        "y": 195
       },
       "hiddenSeries": false,
       "id": 319,
@@ -5757,7 +5357,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 216
+        "y": 202
       },
       "hiddenSeries": false,
       "id": 321,
@@ -5860,7 +5460,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 216
+        "y": 202
       },
       "hiddenSeries": false,
       "id": 323,
@@ -5963,7 +5563,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 223
+        "y": 209
       },
       "hiddenSeries": false,
       "id": 325,
@@ -6066,7 +5666,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 223
+        "y": 209
       },
       "hiddenSeries": false,
       "id": 327,
@@ -6169,7 +5769,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 230
+        "y": 216
       },
       "hiddenSeries": false,
       "id": 329,
@@ -6272,7 +5872,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 230
+        "y": 216
       },
       "hiddenSeries": false,
       "id": 331,
@@ -6375,7 +5975,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 237
+        "y": 223
       },
       "hiddenSeries": false,
       "id": 333,
@@ -6478,7 +6078,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 237
+        "y": 223
       },
       "hiddenSeries": false,
       "id": 337,
@@ -6581,7 +6181,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 244
+        "y": 230
       },
       "hiddenSeries": false,
       "id": 335,
@@ -6684,7 +6284,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 244
+        "y": 230
       },
       "hiddenSeries": false,
       "id": 341,
@@ -6787,7 +6387,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 251
+        "y": 237
       },
       "hiddenSeries": false,
       "id": 339,
@@ -6890,7 +6490,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 251
+        "y": 237
       },
       "hiddenSeries": false,
       "id": 343,
@@ -6993,7 +6593,7 @@
         "h": 6,
         "w": 24,
         "x": 0,
-        "y": 258
+        "y": 244
       },
       "hiddenSeries": false,
       "id": 345,
@@ -7113,7 +6713,7 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "demo",
           "value": "demo"
         },
@@ -7145,7 +6745,6 @@
         "allValue": ".*",
         "current": {
           "selected": true,
-          "tags": [],
           "text": [
             "solr-cluster"
           ],
@@ -7216,6 +6815,7 @@
         "allValue": null,
         "current": {
           "selected": true,
+          "tags": [],
           "text": [
             "All"
           ],
@@ -7517,5 +7117,5 @@
   "timezone": "utc",
   "title": "KubeDB / Solr / Pod",
   "uid": "0dBMIuN7m",
-  "version": 10
+  "version": 11
 }
